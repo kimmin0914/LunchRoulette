@@ -17,9 +17,9 @@ public class LunchRoulette {
 
         // 1~10 사이의 난수 생성
         int randomNum = (int)(Math.random() * 10) + 1;
-        String resultMenu = "";
+        String resultMenu = ""; // 최종 추천 메뉴를 저장할 빈 문자열 선언
 
-        // 입력받은 상황 번호에 따라 1차 분류
+        // 바깥쪽 switch문: 사용자가 입력한 상황에 따라 1차 카테고리 분류
         switch (mood) {
             case 1:
                 // 1번 선택 시 메뉴 10가지
@@ -29,7 +29,7 @@ public class LunchRoulette {
                     case 3: resultMenu = "직화 쭈꾸미"; break;
                     case 4: resultMenu = "불닭볶음면"; break;
                     case 5: resultMenu = "양념치킨"; break;
-                    case 6: resultMenu = "얼큰한 짬뽕"; break;
+                    case 6: resultMenu = "유관장 짬뽕"; break;
                     case 7: resultMenu = "돼지고기 김치찌개"; break;
                     case 8: resultMenu = "얼큰 뼈해장국"; break;
                     case 9: resultMenu = "낙곱새"; break;
@@ -43,13 +43,13 @@ public class LunchRoulette {
                     case 1: resultMenu = "학식 제육덮밥"; break;
                     case 2: resultMenu = "편의점 컵라면과 삼각김밥"; break;
                     case 3: resultMenu = "한솥 치킨마요 도시락"; break;
-                    case 4: resultMenu = "동네 짜장면"; break;
+                    case 4: resultMenu = "4천원 짜장면"; break;
                     case 5: resultMenu = "길거리 토스트"; break;
                     case 6: resultMenu = "김밥천국 라면 세트"; break;
                     case 7: resultMenu = "학식 돈까스"; break;
                     case 8: resultMenu = "패스트푸드 런치 세트"; break;
                     case 9: resultMenu = "냉동 볶음밥"; break;
-                    case 10: resultMenu = "구내식당 백반"; break;
+                    case 10: resultMenu = "가정식 백반"; break;
                 }
                 break;
 
@@ -72,7 +72,7 @@ public class LunchRoulette {
             default:
                 // 1, 2, 3 이외의 숫자를 입력했을 경우 예외 처리
                 System.out.println("잘못된 번호입니다. 프로그램을 종료합니다.");
-                return;
+                return; // 메인 메서드를 종료하여 프로그램 강제 종료
         }
 
         System.out.println("\n메뉴 고르는 중...");
